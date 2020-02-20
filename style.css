@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+:root{
+    --c-navbar: #9F4E30;
+    --size-20: 1.25 rem;
+    --c-btn: #FF6D05;
+    --size-input: 0.875rem;
+    --c-input-text: rgb(185, 221, 250);
+    --c-input-burder: #7FC4FD;
+}
+
+body.app{
+    font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    color: white;
+}
+
+.navbar{
+    background-color: var(--c-navbar) !important;
+}
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link{
+    color: white !important;
+    font-size: var(--size-20) !important;
+}
+
+.space-around{
+    display: flex !important;
+    justify-content: space-around !important;
+}
+.space-between{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.space-evenly{
+    display: flex !important;
+    justify-content: space-evenly !important;
+}
+
+button, .btn, button.btn, .btn-small, .btn-large, button.btn-small, button.btn-large, .nav-item button.nav-link{
+    color: white;
+    background-color: var(--c-btn) !important;
+    padding: 0em 1em !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+}
+
+.nav-item button.nav-link{
+    font-size: 1rem;
+    display: inline;
+    margin: auto 1rem;
+}
+
+.nav-item .nav-link{
+    font-size: var(--size-20);
+}
+
+input{
+    font-size: var(--size-input);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    color: var(--c-input-text);
+    border-color: var(--c-input-burder);
+}
