@@ -1,0 +1,25 @@
+<main class="view">
+    <div class="container">
+
+        <h1><img src="assets/Group 73.svg" alt="Fantasy Delve Games" class="logo-full container"></h1>
+
+        <div id="event-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li ng-repeat="event in featuredevents" data-target="#event-carousel" data-slide-to="{{ $index }}"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div ng-repeat="event in featuredevents" class="item">
+                    <div>
+                        <h2>{{ event.name }}</h2>
+                        <h3>{{ event.date }}</h3>
+                        <h3>{{ event.location }}</h3>
+                    </div>
+                    <img src="assets/{{ event.image }}" alt="{{ event.name }} {{ event.date }} {{ event.location }}">
+                </div>
+            </div>
+
+        </div>
+</main>
