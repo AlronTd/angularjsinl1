@@ -9,6 +9,8 @@
     --c-input-text: #2699FB;
     --c-input-border: #7FC4FD;
     --c-bg-main: #6A301B;
+    --size-50: 3.125rem;
+    --container-size: 79rem
 }
 
 body.app{
@@ -86,7 +88,8 @@ body.app input.form-control::placeholder{
 }
 
 .view{
-    background-color: var(--c-bg-main)
+    background-color: var(--c-bg-main);
+    min-height: calc(100vh - 4.007rem);
 }
 
 .relative{
@@ -99,4 +102,20 @@ body.app input.form-control::placeholder{
 
 .container{
     max-width: 1265px;
+}
+
+.carousel-overlay{
+    position: absolute;
+    top: 1.56em;
+    left: 2em;
+}
+.carousel-overlay h2{
+    font-size: var(--size-50);
+    margin: 0;
+}
+.carousel-overlay p{
+    font-size: var(--size-20);
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
+    padding: 0
 }

@@ -5,6 +5,9 @@ app.config(function($routeProvider) {
     .when("/", { 
         templateUrl: "views/home.html",
         controller: "homeController" 
+    }).when("/events", {
+        templateUrl: "views/eventsearch.html",
+        controller: "searchController"
     })
 })
 
@@ -26,6 +29,10 @@ app.controller("homeController", function($scope) {
     $scope.featuredevents = [
         new event('Event 1', 'Venue 1, City 1, Province 1', 'xx:xx', '20xx/xx/xx', '', 'tuce-wXTPJvONpII-unsplash cropped 2.png')
     ]
+})
+
+app.controller("searchController", function($scope) {
+    
 })
 
 
