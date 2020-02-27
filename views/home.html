@@ -3,23 +3,87 @@
 
         <h1><img src="assets/Group 73.svg" alt="Fantasy Delve Games" class="logo-full container"></h1>
 
+        <!-- start: carousel -->
         <div id="event-carousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li ng-repeat="event in featuredevents" data-target="#event-carousel" data-slide-to="{{ $index }}"></li>
+                <li ng-class="{active:!$index}" ng-repeat="event in featuredevents" data-target="#event-carousel"
+                    data-slide-to="{{ $index }}">
+                    <div></div>
+                </li>
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div ng-repeat="event in featuredevents" class="item relative">
+                <div ng-repeat="event in featuredevents" ng-class="{active:!$index}" class="carousel-item relative">
                     <div class="carousel-overlay">
                         <h2>{{ event.name }}</h2>
                         <p>{{ event.date }}<p>
-                        <p>{{ event.location.slice(event.location.indexOf(", ") + 2, event.location.lastIndexOf(", ")) }}</p>
+                                <p>{{ event.location.slice(event.location.indexOf(", ") + 2, event.location.lastIndexOf(", ")) }}
+                                </p>
                     </div>
                     <img src="assets/{{ event.image }}" alt="{{ event.name }} {{ event.date }} {{ event.location }}">
                 </div>
             </div>
 
+
         </div>
+        <!-- end: carousel -->
+
+        <!-- start: cards -->
+        <div class="cards">
+            <div class="card">
+                <h2>What we do:</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad neque ratione voluptatem praesentium,
+                    placeat, reprehenderit quod amet assumenda consectetur omnis nihil repellat tempora cumque minima
+                    perspiciatis et impedit vero expedita, aliquam distinctio at illo! Cum harum, nisi veniam explicabo
+                    animi sed voluptatibus ad totam dignissimos est ullam! Voluptate unde minus blanditiis! Et, unde?
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Our events</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dolorem temporibus dolores esse
+                    quae doloremque atque et magnam earum asperiores, mollitia dignissimos deserunt laudantium hic fuga
+                    commodi reprehenderit debitis dolore.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Tournaments</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad neque ratione voluptatem praesentium,
+                    placeat, reprehenderit quod amet assumenda consectetur omnis nihil repellat tempora cumque minima
+                    perspiciatis et impedit vero expedita, aliquam distinctio at illo!
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Casual gatherings</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad neque ratione voluptatem praesentium,
+                    placeat, reprehenderit quod amet assumenda consectetur omnis nihil repellat tempora cumque minima
+                    perspiciatis et impedit vero expedita, aliquam distinctio at illo!
+                </p>
+            </div>
+            
+        </div>
+        <!-- end: cards -->
+
+        <!-- start: footer -->
+        <footer class="relative">
+            <div class="social-media-container">
+                <div ng-repeat="link in socialmedialinks" class="social-media-box">
+                    <img src="../assets/{{ link.image }}" alt="">
+                </div>
+            </div>
+            <img src="../assets/robert-lukeman-_RBcxo9AU-U-unsplash cropped.png" alt="">
+        </footer>
+        <!-- end: footer -->
 </main>
