@@ -1,0 +1,28 @@
+<div class="event-table">
+            
+    <!-- start: header -->
+    <h1 class="table-header parent space-around">
+        
+        <div class="table-header name">NAME</div>
+        <div class="table-header location">LOCATION</div>
+        <div class="table-header table-time-section">TIME</div>
+        
+    </h1>
+    <!-- end: header -->
+    
+    <!-- start: table content -->
+    <div class="table-row space-between" ng-repeat="event in allEvents">
+        
+        <div class="table-value name">{{ event.name }}</div>
+        <div class="table-value location"><span class="divider"></span>{{ event.location }}</div>
+        
+        <div class="table-value table-time-section space-between">
+            <div class="table-value time"><span class="divider"></span>{{ event.time }}</div>
+            <div class="table-value date">{{ event.date }}</div>
+            <a href=""><button class="btn">{{ $parent.getSignupStatus(event) }}</button></a>
+        </div>
+        
+    </div> 
+    <!-- end: table content -->
+    
+</div>
