@@ -10,7 +10,7 @@
     --c-input-border: #7FC4FD;
     --c-bg-main: #6A301B;
     --size-50: 3.125rem;
-    --container-size: 79rem;
+    --container-size: 77.75rem;
     --c-bg-text-dark: #707070;
     --c-bg-text-light: #878787;
     --c-bg-table: #D4D4D4;
@@ -32,6 +32,7 @@ p{
 }
 
 img{
+    box-sizing: content-box;
     max-width: var(--container-size) !important;
     overflow: hidden;
 }
@@ -121,7 +122,8 @@ body.app input.form-control::placeholder{
 }
 
 .container{
-    max-width: 1265px;
+    box-sizing: content-box;
+    max-width: 1244px;
 }
 
 .carousel-overlay{
