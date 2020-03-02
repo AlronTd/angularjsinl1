@@ -14,6 +14,8 @@
     --c-bg-text-dark: #707070;
     --c-bg-text-light: #878787;
     --c-bg-table: #D4D4D4;
+    --margin-table-value: 0.5rem;
+    --y-margin-table-btn:0.625rem;
 }
 
 body.app{
@@ -56,9 +58,11 @@ img{
 }
 
 button, .btn, button.btn, .btn-small, .btn-large, button.btn-small, button.btn-large, .nav-item button.nav-link{
+    font-size: 1rem;
     color: white;
     background-color: var(--c-btn) !important;
     padding: 0em 1em !important;
+    border: 1px solid var(--c-bg-text-dark);
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
@@ -67,7 +71,7 @@ button, .btn, button.btn, .btn-small, .btn-large, button.btn-small, button.btn-l
 }
 
 .nav-item button.nav-link{
-    font-size: 1rem;
+    margin: auto;
     display: inline;
 }
 
@@ -200,4 +204,41 @@ body.app input.form-control::placeholder{
 }
 .social-media-box *{
     margin: auto;
+}
+
+.search-term-container{
+    box-sizing: content-box;
+    padding-top: 7.5rem;
+    height: 3rem;
+}
+
+.event-table{
+    background-color: var(--c-bg-table);
+    min-height: calc(99vh - 11.25rem);
+    
+}
+.table-header.parent{
+    background-color: var(--c-bg-text-light);
+}
+.table-row{
+    display: flex;
+    background-color:var(--c-bg-text-light);
+    margin: 1.5rem 2.75rem;
+    position: relative;
+}
+.table-row .table-value.table-time-section button.btn{
+    width: 8rem;
+    margin: 0.625rem 1rem;
+}
+.table-row .divider{
+    border: 1px solid white;
+    margin-right: var(--margin-table-value);
+}
+.table-row .table-value{
+    flex-basis: 21rem;
+    margin: auto 0;
+    align-content: center;
+}
+.table-row .table-value.name{
+    margin-left: var(--margin-table-value);
 }

@@ -34,8 +34,8 @@ class event {
     }
 }
 
-class socialMediaLink{
-    constructor(image, url){
+class socialMediaLink {
+    constructor(image, url) {
         this.image = image
         this.url = url
     }
@@ -44,12 +44,33 @@ class socialMediaLink{
 
 app.controller("globalController", function ($scope) {
 
-    $scope.featuredevents = [
+    $scope.account = null
+
+
+    $scope.allEvents = [
         new event('Event 1', 'Venue 1, City 1, Province 1', 'xx:xx', '20xx/xx/xx', '', 'tuce-wXTPJvONpII-unsplash cropped 2.png'),
-        new event('Event 1', 'Venue 1, City 1, Province 1', 'xx:xx', '20xx/xx/xx', '', 'tuce-wXTPJvONpII-unsplash cropped 2.png'),
-        new event('Event 1', 'Venue 1, City 1, Province 1', 'xx:xx', '20xx/xx/xx', '', 'tuce-wXTPJvONpII-unsplash cropped 2.png')
+        new event('Event 2', 'Venue 1, City 1, Province 1', 'xx:xx', '20xx/xx/xx', '', 'tuce-wXTPJvONpII-unsplash cropped 2.png'),
+        new event('Event 3', 'Venue 1, City 1, Province 1', 'xx:xx', '20xx/xx/xx', '', 'tuce-wXTPJvONpII-unsplash cropped 2.png'),
     ]
-    
+    $scope.featuredevents = [
+        $scope.allEvents[0],
+        $scope.allEvents[1],
+        $scope.allEvents[2],
+    ]
+    $scope.cancelledEvents = [$scope.allEvents[2]]
+
+    $scope.getSignupStatus = (event) => {
+        if ($scope.cancelledEvents.includes(event)) {
+            return 'CANCELLED'
+        }
+        else if ($scope.account && $scope.account.registeredEvents.includes(event)) {
+            return 'SIGNED UP'
+        } else {
+            return 'SIGN UP'
+        }
+    }
+
+
     $scope.socialmedialinks = [
         new socialMediaLink('Path 2.svg', ''),
         new socialMediaLink('Path 3.svg', ''),
