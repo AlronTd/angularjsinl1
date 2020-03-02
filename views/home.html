@@ -20,9 +20,9 @@
         <!-- start: footer -->
         <footer class="relative">
             <div class="social-media-container">
-                <div ng-repeat="link in socialmedialinks" class="social-media-box">
+                <a ng-repeat="link in socialmedialinks" class="social-media-box" href="{{ link.url }}">
                     <img src="../assets/{{ link.image }}" alt="">
-                </div>
+                </a>
             </div>
             <img src="../assets/robert-lukeman-_RBcxo9AU-U-unsplash cropped.png" alt="">
         </footer>
