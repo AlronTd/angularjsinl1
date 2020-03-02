@@ -58,7 +58,8 @@ img{
     justify-content: space-evenly !important;
 }
 
-button, .btn, button.btn, .btn-small, .btn-large, button.btn-small, button.btn-large, .nav-item button.nav-link{
+button, .btn, button.btn, .nav-item button.nav-link, 
+button:hover, .btn:hover, button.btn:hover {
     font-size: 1rem;
     color: white;
     background-color: var(--c-btn) !important;
